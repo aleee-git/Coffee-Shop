@@ -1,0 +1,288 @@
+/* Custome properties */
+:root {
+
+    --fuenteHeading: 'Open Sans', sans-serif;
+    --fuenteParrafo: 'PT Sans', sans-serif;
+
+    --cafe: #835858;
+    --cafeOscuro: #463333;
+    --rosa: #FFF0F0;
+    --rosaOscuro: #EBD4D4;
+}
+/* Custome properties */
+
+/* GLOBALES */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafo);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.container {
+    /* max-width: 1200px;
+    width: 85%; */
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+.no-margin { margin: 0; }
+
+.no-padding { padding: 0; }
+
+a { text-decoration: none; }
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+    text-align: center;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 32px; }
+h4 { font-size: 28px; }
+
+.centrar-texto {
+    text-align: center;
+}
+/* GLOBALES */
+
+
+.header {
+    background-image: url(../Images/banner.jpg);
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header_texto {
+    text-align: center;
+    color: var(--rosa);
+    margin-top: 50px;
+}
+
+.logo {
+    color: var(--rosa);
+}
+
+.logo_nombre {
+    font-weight: 400;
+}
+
+.logo_bold {
+    font-weight: 700;
+}
+
+.barra {
+    padding-top: 40px;
+}
+
+.enlace {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: var(--rosaOscuro);
+}
+
+.entrada {
+    border-bottom: 1px solid gray ;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--rosa);
+    text-align: center;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton_primary {
+    background-color: var(--cafeOscuro);
+    color: var(--rosaOscuro);
+}
+
+.boton_secundary {
+    background-color: var(--cafe);
+    color: var(--rosa);
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget_curso {
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
+
+.widget_curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.label_curso {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+
+}
+.curso_info {
+    font-weight: normal;
+}
+
+.label_curso, .curso_info {
+    font-size: 20px;
+}
+
+.footer {
+    background-color: var(--cafeOscuro);
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+
+/* NOSOTROS.HTML */
+.nosotros {
+    text-align: justify;
+} 
+/* NOSOTROS.HTML */
+
+
+/* CURSOS.HTML */
+.curso {
+    padding: 30px 0;
+    border-bottom: 1px solid gray;
+    text-align: justify;
+}
+.curso:last-of-type {
+    border: none;
+}
+
+
+.label__curso {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+
+}
+.curso__info {
+    font-weight: normal;
+}
+
+.label__curso, .curso__info {
+    font-size: 20px;
+}
+/* CURSOS.HTML */
+
+/* CONTACTO.HTML */
+.formulario {
+    background-color: white;
+    margin: -50px auto 0 auto;
+    width: 95%;
+    padding: 50px;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+.campo-label {
+    /* Factor de crecimeinto o disminucion 0, se queda con 90px */
+    flex: 0 0 90px;
+}
+
+/* Toma el 1 restante */
+.campo-field {
+    flex: 1;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+
+.campo-field-area {
+
+}
+/* CONTACTO.HTML */
+
+
+/* CONTACTO.HTML */
+.contacto-bg {
+    background-image: url(../Images/contacto.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navegacion {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .header_texto {
+        margin-top: 150px;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        column-gap: 40px;
+    }
+
+    .boton {
+        display: inline-block;
+    }
+
+    /* NOSOTROS.HTML */
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        text-align: justify;
+    }
+    /* NOSOTROS.HTML */
+
+    /* CURSOS.HTML */
+    .curso {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        column-gap: 40px;
+        text-align: justify;
+    }
+    /* CURSOS.HTML */
+
+}
